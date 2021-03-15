@@ -20,7 +20,8 @@ TEST(Rustamov_Azer_ComplexNumberTest, Complex_Conjugate_Addition) {
 
 typedef testing::TestWithParam<std::tuple<double, double>>
         Rustamov_Azer_ComplexNumberTest_Parametrized;
-TEST_P(Rustamov_Azer_ComplexNumberTest_Parametrized, Complex_Conjugate_Multiplication) {
+TEST_P(Rustamov_Azer_ComplexNumberTest_Parametrized,
+        Complex_Conjugate_Multiplication) {
     double re_1 = std::get<0>(GetParam());
     double im_1 = std::get<1>(GetParam());
     double re_2 = re_1;
@@ -29,14 +30,16 @@ TEST_P(Rustamov_Azer_ComplexNumberTest_Parametrized, Complex_Conjugate_Multiplic
     ComplexNumber num2(re_2, im_2);
     ComplexNumber res = num1 * num2;
 
-    double lensq_expected = (re_1 * re_1 + im_1 * im_1) * (re_1 * re_1 + im_1 * im_1);
+    double lensq_expected = (re_1 * re_1 + im_1 * im_1) *
+                            (re_1 * re_1 + im_1 * im_1);
     double res_Resq = res.getRe() * res.getRe();
 
     ASSERT_DOUBLE_EQ(res_Resq, lensq_expected);
     ASSERT_DOUBLE_EQ(res.getIm(), 0.0);
 }
 
-TEST_P(Rustamov_Azer_ComplexNumberTest_Parametrized, Complex_Conjugate_Equal_lengths) {
+TEST_P(Rustamov_Azer_ComplexNumberTest_Parametrized,
+        Complex_Conjugate_Equal_lengths) {
     double re_1 = std::get<0>(GetParam());
     double im_1 = std::get<1>(GetParam());
     double re_2 = re_1;
