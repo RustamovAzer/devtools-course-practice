@@ -12,7 +12,6 @@ TEST(Rustamov_Azer_ComplexNumberTest, Complex_Conjugate_Addition) {
     double im_2 = -im_1;
     ComplexNumber num1(re_1, im_1);
     ComplexNumber num2(re_2, im_2);
-    
     ComplexNumber sum = num1 + num2;
 
     ASSERT_DOUBLE_EQ(sum.getRe(), 2 * re_1);
@@ -26,8 +25,8 @@ TEST(Rustamov_Azer_ComplexNumberTest, Complex_Conjugate_Multiplication) {
     double im_2 = -im_1;
     ComplexNumber num1(re_1, im_1);
     ComplexNumber num2(re_2, im_2);
-    
     ComplexNumber res = num1 * num2;
+
     double lensq_expected = (re_1*re_1 + im_1*im_1)*(re_1*re_1 + im_1*im_1);
     double res_Resq = res.getRe() * res.getRe();
 
@@ -42,7 +41,7 @@ TEST(Rustamov_Azer_ComplexNumberTest, Complex_Conjugate_Equal_lengths) {
     double im_2 = -im_1;
     ComplexNumber num1(re_1, im_1);
     ComplexNumber num2(re_2, im_2);
-    
+
     double len1sq = num1.getRe() * num1.getRe() + num1.getIm() * num1.getIm();
     double len2sq = num2.getRe() * num2.getRe() + num1.getIm() * num1.getIm();
 
