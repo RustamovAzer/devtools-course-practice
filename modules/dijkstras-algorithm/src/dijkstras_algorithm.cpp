@@ -1,7 +1,6 @@
 // Copyright 2021 Rustamov Azer
 
 #include <algorithm>
-#include <iostream>
 #include <limits>
 #include <vector>
 
