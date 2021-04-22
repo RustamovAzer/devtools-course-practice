@@ -13,9 +13,7 @@ Matrix dijkstras_algorithm(Matrix graph, int verts, int source_vertex) {
     if (source_vertex >= verts) {
         throw "Incorrecr source vertex";
     }
-    // Matrix shortest_path_tree(verts * verts);
     double inf = std::numeric_limits<double>::infinity();
-    // std::fill(shortest_path_tree.begin(), shortest_path_tree.end(), inf);
     Matrix distance_to_verex(verts);
     std::fill(distance_to_verex.begin(), distance_to_verex.end(), inf);
     distance_to_verex[source_vertex] = 0.0;
@@ -37,17 +35,8 @@ Matrix dijkstras_algorithm(Matrix graph, int verts, int source_vertex) {
         }
         if (shortest_path == inf)
             break;
-        // shortest_path_tree[closest_vert_in * verts + closest_vert_out] = shortest_path;
-        distance_to_verex[closest_vert_out] = distance_to_verex[closest_vert_in] +
-           shortest_path;
+        distance_to_verex[closest_vert_out] =
+                distance_to_verex[closest_vert_in] + shortest_path;
     }
-    /*
-    for (int i = 0; i < verts; i++) {
-        std::cout << distance_to_verex[i] << "; "; 
-    }
-    std::cout << std::endl;
-    */
-
-    //return shortest_path_tree;
     return distance_to_verex;
 }
