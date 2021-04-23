@@ -7,8 +7,7 @@
 #include "include/dijkstras_algorithm.h"
 
 Matrix dijkstras_algorithm(Matrix graph, int verts, int source_vertex) {
-    if ((graph.size() != verts * verts) ||
-        (*std::min_element(graph.begin(), graph.end()) < 0)) {
+    if (graph.size() != verts * verts) {
         throw "Incorrect graph";
     }
     if (source_vertex >= verts) {
