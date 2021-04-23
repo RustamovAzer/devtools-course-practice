@@ -6,7 +6,8 @@
 
 #include "include/dijkstras_algorithm.h"
 
-Matrix GraphAlgorithms::dijkstras_algorithm(Matrix graph, int verts, int source_vertex) {
+Matrix GraphAlgorithms::dijkstras_algorithm
+        (Matrix graph, int verts, int source_vertex) {
     if (graph.size() != verts * verts) {
         throw "Incorrect graph";
     }
