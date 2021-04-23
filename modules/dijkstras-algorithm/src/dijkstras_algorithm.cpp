@@ -8,7 +8,7 @@
 
 Matrix GraphAlgorithms::dijkstras_algorithm
         (Matrix graph, int verts, int source_vertex) {
-    if (graph.size() != verts * verts) {
+    if (graph.size() != (unsigned)verts * verts) {
         throw "Incorrect graph";
     }
     if (source_vertex >= verts) {
