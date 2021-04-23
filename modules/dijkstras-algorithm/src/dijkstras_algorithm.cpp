@@ -19,8 +19,8 @@ Matrix GraphAlgorithms::dijkstras_algorithm
     std::fill(distance_to_verex.begin(), distance_to_verex.end(), inf);
     distance_to_verex[source_vertex] = 0.0;
     int closest_vert_in, closest_vert_out;
-    double shortest_path;
     while (true) {
+        double shortest_path;
         shortest_path = inf;
         for (int vert_in = 0; vert_in < verts; vert_in++) {
             if (distance_to_verex[vert_in] != inf) {
