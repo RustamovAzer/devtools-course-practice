@@ -1,7 +1,7 @@
 // Copyright 2021 Rustamov Azer
 
-#include <algorithm>
-#include <limits>
+// #include <algorithm>
+// #include <limits>
 #include <vector>
 
 #include "include/dijkstras_algorithm.h"
@@ -14,9 +14,12 @@ Matrix dijkstras_algorithm(Matrix graph, int verts, int source_vertex) {
     if (source_vertex >= verts) {
         throw "Incorrecr source vertex";
     }
-    double inf = std::numeric_limits<double>::infinity();
+    double inf = 9007199254740992;
     Matrix distance_to_verex(verts);
-    std::fill(distance_to_verex.begin(), distance_to_verex.end(), inf);
+    for (int i = 0; i < distance_to_verex.size(); i++) {
+        distance_to_verex[i] = inf;
+    }
+    // std::fill(distance_to_verex.begin(), distance_to_verex.end(), inf);
     distance_to_verex[source_vertex] = 0.0;
     int closest_vert_in, closest_vert_out;
     double shortest_path;

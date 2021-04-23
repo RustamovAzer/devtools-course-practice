@@ -1,7 +1,7 @@
 // Copyright 2021 Rustamov Azer
 
 #include <gtest/gtest.h>
-#include <limits>
+// #include <limits>
 #include <vector>
 
 #include "include/dijkstras_algorithm.h"
@@ -9,7 +9,7 @@
 #define EPSILON 0.0001
 
 TEST(Dijkstra_Algorithm, Incorrect_Verts_Throws_Exception) {
-    double inf = std::numeric_limits<double>::infinity();
+    double inf = 9007199254740992;
     int verts = 0;
     Matrix graph = {inf, inf, 7,   3,   9,
                     inf, inf, 2,   15,  4,
@@ -20,7 +20,7 @@ TEST(Dijkstra_Algorithm, Incorrect_Verts_Throws_Exception) {
 }
 
 TEST(Dijkstra_Algorithm, Incorrect_Source_Throws_Exception) {
-    double inf = std::numeric_limits<double>::infinity();
+    double inf = 9007199254740992;
     int verts = 5;
     Matrix graph = {inf, inf, 7,   3,   9,
                     inf, inf, 2,   15,  4,
@@ -31,7 +31,7 @@ TEST(Dijkstra_Algorithm, Incorrect_Source_Throws_Exception) {
 }
 
 TEST(Dijkstra_Algorithm, Correct_Answer_Unoriented_5_Seq) {
-    double inf = std::numeric_limits<double>::infinity();
+    double inf = 9007199254740992;
     int verts = 5;
     Matrix graph = {inf, inf, 7,   3,   9,
                     inf, inf, 2,   15,  4,
