@@ -6,7 +6,8 @@
 
 #include "include/dijkstras_algorithm.h"
 
-Matrix dijkstras_algorithm(Matrix graph, int verts, int source_vertex) {
+std::vector<double> dijkstras_algorithm(std::vector<double> graph,
+                                        int verts, int source_vertex) {
     if (graph.size() != verts * verts) {
         throw "Incorrect graph";
     }
@@ -14,7 +15,7 @@ Matrix dijkstras_algorithm(Matrix graph, int verts, int source_vertex) {
         throw "Incorrecr source vertex";
     }
     double inf = 9007199254740992;
-    Matrix distance_to_verex(verts);
+    std::vector<double> distance_to_verex(verts);
     for (int i = 0; i < distance_to_verex.size(); i++) {
         distance_to_verex[i] = inf;
     }
