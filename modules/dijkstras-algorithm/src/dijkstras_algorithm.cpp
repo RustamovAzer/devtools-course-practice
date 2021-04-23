@@ -36,8 +36,8 @@ Matrix GraphAlgorithms::dijkstras_algorithm
         }
         if (shortest_path == inf)
             break;
-        distance_to_verex[closest_vert_out] = distance_to_verex[closest_vert_in] +
-           shortest_path;
+        distance_to_verex[closest_vert_out] =
+            distance_to_verex[closest_vert_in] + shortest_path;
     }
 
     return distance_to_verex;
