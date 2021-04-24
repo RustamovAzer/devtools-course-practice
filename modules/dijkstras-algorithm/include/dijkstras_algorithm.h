@@ -7,7 +7,8 @@
 
 using Matrix = std::vector<double>;
 namespace GraphAlgorithms {
-    Matrix dijkstras_algorithm(Matrix graph, int verts, int source_vertex);
+    Matrix dijkstras_algorithm
+        (const Matrix& graph, int verts, int source_vertex);
 }
 
 #endif  // MODULES_DIJKSTRAS_ALGORITHM_INCLUDE_DIJKSTRAS_ALGORITHM_H_

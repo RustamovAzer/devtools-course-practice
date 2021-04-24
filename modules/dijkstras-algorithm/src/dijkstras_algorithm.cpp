@@ -7,18 +7,19 @@
 #include "include/dijkstras_algorithm.h"
 
 Matrix GraphAlgorithms::dijkstras_algorithm
-        (Matrix graph, int verts, int source_vertex) {
+        (const Matrix& graph, int verts, int source_vertex) {
     if (graph.size() != (unsigned)verts * verts) {
-        throw "Incorrect graph";
+        throw std::runtime_error("Incorrect graph");
     }
     if (source_vertex >= verts) {
-        throw "Incorrecr source vertex";
+        throw std::runtime_error("Incorrecr source vertex");
     }
+
     double inf = std::numeric_limits<double>::infinity();
-    Matrix distance_to_verex(verts);
-    std::fill(distance_to_verex.begin(), distance_to_verex.end(), inf);
+    Matrix distance_to_verex(verts, inf);
     distance_to_verex[source_vertex] = 0.0;
     int closest_vert_in, closest_vert_out;
+
     while (true) {
         double shortest_path;
         shortest_path = inf;

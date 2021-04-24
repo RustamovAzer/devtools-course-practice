@@ -6,7 +6,8 @@
 
 #include "include/dijkstras_algorithm.h"
 
-#define EPSILON 0.0001
+
+constexpr double EPSILON = 0.0001;
 
 TEST(Dijkstra_Algorithm, Incorrect_Verts_Throws_Exception) {
     double inf = std::numeric_limits<double>::infinity();
@@ -42,9 +43,8 @@ TEST(Dijkstra_Algorithm, Correct_Answer_Unoriented_5_Seq) {
 
     Matrix result = GraphAlgorithms::dijkstras_algorithm(graph, verts, 0);
     for (int i = 0; i < verts; i++) {
-        if ((result[i] != inf) || (expected_result[i] != inf)) {
-            ASSERT_NEAR(result[i], expected_result[i], EPSILON);
+        if ((expected_result[i] != inf) || (result[i] != inf)) {
+            ASSERT_NEAR(expected_result[i], result[i], EPSILON);
         }
     }
 }
-
