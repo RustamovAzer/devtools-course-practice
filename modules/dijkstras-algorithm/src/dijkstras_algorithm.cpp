@@ -19,7 +19,6 @@ Matrix GraphAlgorithms::dijkstras_algorithm
     Matrix distance_to_verex(verts, inf);
     distance_to_verex[source_vertex] = 0.0;
     int closest_vert_in, closest_vert_out;
-    
 
     while (true) {
         double shortest_path;
