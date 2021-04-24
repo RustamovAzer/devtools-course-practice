@@ -29,7 +29,6 @@ Matrix GraphAlgorithms::dijkstras_algorithm
                     if ((distance_to_verex[vert_out] == inf) &&
                         ((distance_to_verex[vert_in] +
                         graph[vert_in * verts + vert_out]) < shortest_path)) {
-                        int closest_vert_in = vert_in;
                         closest_vert_out = vert_out;
                         shortest_path = distance_to_verex[vert_in] +
                             graph[vert_in * verts + vert_out];
