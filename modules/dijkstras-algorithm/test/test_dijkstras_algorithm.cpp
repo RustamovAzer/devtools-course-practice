@@ -39,7 +39,7 @@ TEST(Dijkstra_Algorithm, Correct_Answer_Unoriented_5_Seq) {
                     7,   2,   inf, 10,  inf,
                     3,   15,  10,  inf, inf,
                     9,   4,   inf, inf, inf };
-    Matrix expected_result = {0, 9, 7, 3, 13};
+    Matrix expected_result = {0, 9, 7, 3, 9};
 
     Matrix result = GraphAlgorithms::dijkstras_algorithm(graph, verts, 0);
     for (int i = 0; i < verts; i++) {
