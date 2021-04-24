@@ -6,6 +6,7 @@
 
 #include "include/dijkstras_algorithm.h"
 
+
 constexpr double EPSILON = 0.0001;
 
 TEST(Dijkstra_Algorithm, Incorrect_Verts_Throws_Exception) {
@@ -44,6 +45,7 @@ TEST(Dijkstra_Algorithm, Correct_Answer_Unoriented_5_Seq) {
     for (int i = 0; i < verts; i++) {
         if ((expected_result[i] != inf) || (result[i] != inf)) {
             ASSERT_NEAR(expected_result[i], result[i], EPSILON);
+
         }
     }
 }
