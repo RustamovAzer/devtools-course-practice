@@ -45,7 +45,6 @@ TEST(Dijkstra_Algorithm, Correct_Answer_Unoriented_5_Seq) {
     for (int i = 0; i < verts; i++) {
         if ((expected_result[i] != inf) || (result[i] != inf)) {
             ASSERT_NEAR(expected_result[i], result[i], EPSILON);
-
         }
     }
 }
