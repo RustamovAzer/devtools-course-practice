@@ -12,7 +12,8 @@
 namespace Polygon {
 
 std::string PolygonAreaCalculator::help(const std::string& filename) const {
-    return "Usage: " + filename + " Coordinates of points...\nExample: " + filename +
+    return "Usage: " + filename +
+        " Coordinates of points...\nExample: " + filename +
            " 1.2 2.0 1.2 2.3 5.7 0.5";
 }
 
@@ -25,7 +26,7 @@ std::string PolygonAreaCalculator::operator()
     if ((argc - 1) % 2 == 1)
         return "[ERROR]: Number of arguments must be even";
     double result;
-    
+
     std::vector<double> numbers;
     numbers.reserve(argc - 1);
     for (size_t i = 1; i < argc; i++) {
@@ -51,7 +52,7 @@ std::string PolygonAreaCalculator::operator()
             points[i / 2].second = numbers[i];
         }
     }
-    
+
     try {
         result = PolygonArea(points);
     } catch (std::runtime_error& e) {
