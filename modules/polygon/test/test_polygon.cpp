@@ -8,6 +8,9 @@ TEST(Alibekov_Murad_Polygon_Tests, Area_Without_Points_Is_0) {
     // Arrange
     Points2D polygon = {};
 
+    // Act
+    double area = Polygon::PolygonArea(polygon);
+
     // Assert
     ASSERT_DOUBLE_EQ(0., area);
 }
