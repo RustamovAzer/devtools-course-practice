@@ -6,7 +6,7 @@
 #include <vector>
 
 #include "include/polygon.h"
-#include "include/polygon_area_calculator.h"
+#include "include/polygon_area_calculator.hpp"
 
 
 namespace Polygon {
