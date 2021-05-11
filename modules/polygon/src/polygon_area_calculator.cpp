@@ -29,7 +29,7 @@ std::string PolygonAreaCalculator::operator()
 
     std::vector<double> numbers;
     numbers.reserve(argc - 1);
-    for (size_t i = 1; i < argc; i++) {
+    for (auto i = 1; i < argc; i++) {
         std::string arg = argv[i];
         try {
             double num = std::stod(arg);
@@ -45,7 +45,7 @@ std::string PolygonAreaCalculator::operator()
 
     Points2D points((argc - 1) / 2);
     // points.reserve((argc - 1) / 2);
-    for (size_t i = 0; i < argc - 1; i++) {
+    for (auto i = 0; i < argc - 1; i++) {
         if (i % 2 == 0) {
             points[i / 2].first = numbers[i];
         } else {
