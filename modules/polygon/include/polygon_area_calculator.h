@@ -17,6 +17,6 @@ class PolygonAreaCalculator {
     std::string help(const std::string& filename) const;
 };
 
-}
+} // namespace Polygon
 
 #endif  // MODULES_POLYGON_INCLUDE_POLYGON_AREA_CALCULATOR_H_

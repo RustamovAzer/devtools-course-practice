@@ -65,4 +65,4 @@ std::string PolygonAreaCalculator::operator()
     return stream.str();
 }
 
-}
+} // namespace Polygon
