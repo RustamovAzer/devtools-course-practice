@@ -25,8 +25,7 @@ std::string PolygonAreaCalculator::operator()
     if ((argc - 1) % 2 == 1)
         return "[ERROR]: Number of arguments must be even";
     double result;
-    Points2D points;
-    points.reserve((argc - 1) / 2);
+    
     std::vector<double> numbers;
     numbers.reserve(argc - 1);
     for (size_t i = 1; i < argc; i++) {
@@ -42,6 +41,9 @@ std::string PolygonAreaCalculator::operator()
                    std::string(e.what());
         }
     }
+
+    Points2D points((argc - 1) / 2);
+    // points.reserve((argc - 1) / 2);
     for (size_t i = 0; i < argc - 1; i++) {
         if (i % 2 == 0) {
             points[i / 2].first = numbers[i];
@@ -58,6 +60,8 @@ std::string PolygonAreaCalculator::operator()
     std::ostringstream stream;
     stream << "Area of polygon = " << result;
 
+    if (retcode)
+        *retcode = 0;
     return stream.str();
 }
 
