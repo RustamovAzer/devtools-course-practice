@@ -51,12 +51,7 @@ std::string PolygonAreaCalculator::operator()
             points[i / 2].second = numbers[i];
         }
     }
-
-    try {
-        result = PolygonArea(points);
-    } catch (std::runtime_error& e) {
-        return std::string(e.what());
-    }
+    result = PolygonArea(points);
     std::ostringstream stream;
     stream << "Area of polygon = " << result;
 
