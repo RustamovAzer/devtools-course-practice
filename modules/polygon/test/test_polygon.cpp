@@ -4,7 +4,7 @@
 
 #include "include/polygon.h"
 
-TEST(Alibekov_Murad_Polygon_Tests, Area_Without_Points Is_0) {
+TEST(Alibekov_Murad_Polygon_Tests, Area_Without_Points_Is_0) {
     // Arrange
     Points2D polygon = {};
 
