@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-#include "include/polygon_area_calculator.h"
+#include "include/polygon_area_calculator.hpp"
 
 int main(int argc, const char* argv[]) {
     Polygon::PolygonAreaCalculator app;
