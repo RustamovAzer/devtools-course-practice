@@ -28,7 +28,7 @@ std::string PolygonAreaCalculator::operator()
         return "[ERROR]: Number of arguments must be even";
     double result;
 
-    std::vector<double> numbers(argc - 1);
+    std::vector<double> numbers;
     for (auto i = 1; i < argc; i++) {
         std::string arg = argv[i];
         try {
