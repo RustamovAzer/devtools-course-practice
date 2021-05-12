@@ -10,7 +10,7 @@ namespace Polygon {
 
 class PolygonAreaCalculator {
  public:
-    PolygonAreaCalculator() = default;;
+    PolygonAreaCalculator() = default;
     std::string operator()(int argc, const char* argv[],
                            int* retcode = nullptr) const;
  private:
