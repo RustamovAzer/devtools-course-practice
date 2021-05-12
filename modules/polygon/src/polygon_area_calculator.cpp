@@ -1,7 +1,7 @@
 // Copyright 2021 Rustamov Azer
 
-#include <stdexcept>
 #include <sstream>
+#include <stdexcept>
 #include <string>
 #include <vector>
 
@@ -13,13 +13,14 @@ namespace Polygon {
 
 std::string PolygonAreaCalculator::help(const std::string& filename) const {
     return "Usage: " + filename +
-        " Coordinates of points...\nExample: " + filename +
-           " 1.2 2.0 1.2 2.3 5.7 0.5";
+            " Coordinates of points...\n" +
+            "Example: " + filename +
+            " 1.2 2.0 1.2 2.3 5.7 0.5";
 }
 
 std::string PolygonAreaCalculator::operator()
     (int argc, const char* argv[], int* retcode) const {
-    if (retcode)
+    if (retcode != nullptr)
         *retcode = 1;
     if (argc <= 1)
         return help(argv[0]);
@@ -55,7 +56,7 @@ std::string PolygonAreaCalculator::operator()
     std::ostringstream stream;
     stream << "Area of polygon = " << result;
 
-    if (retcode)
+    if (retcode != nullptr)
         *retcode = 0;
     return stream.str();
 }
