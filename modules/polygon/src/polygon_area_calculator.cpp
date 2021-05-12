@@ -13,7 +13,7 @@ namespace Polygon {
 
 std::string PolygonAreaCalculator::help(const std::string& filename) const {
     return "Usage: " + filename +
-            " Coordinates of points...\n" +
+            " Coordinates of points...\n" \
             "Example: " + filename +
             " 1.2 2.0 1.2 2.3 5.7 0.5";
 }
