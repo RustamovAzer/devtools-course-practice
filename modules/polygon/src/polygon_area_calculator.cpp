@@ -29,6 +29,7 @@ std::string PolygonAreaCalculator::operator()
     double result;
 
     std::vector<double> numbers;
+    numbers.reserve(argc - 1);
     for (auto i = 1; i < argc; i++) {
         std::string arg = argv[i];
         try {
