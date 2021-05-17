@@ -45,12 +45,9 @@ std::string PolygonAreaCalculator::operator()
     }
 
     Points2D points((argc - 1) / 2);
-    for (auto i = 0; i < argc - 1; i++) {
-        if (i % 2 == 0) {
-            points[i / 2].first = numbers[i];
-        } else {
-            points[i / 2].second = numbers[i];
-        }
+    for (auto i = 0; i < argc - 2; i += 2) {
+        points[i / 2].first = numbers[i];
+        points[i / 2].second = numbers[i + 1];
     }
     result = PolygonArea(points);
     std::ostringstream stream;
